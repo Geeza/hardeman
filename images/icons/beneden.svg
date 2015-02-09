@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.3 (252) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/beneden</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icons/beneden" sketch:type="MSArtboardGroup" fill="#3BB3F5">
+            <path d="M256,288.448605 L387.466655,162.028052 C391.496304,157.990649 395.525893,157.990649 399.555543,162.028052 L422.977763,184.738331 C427.007412,188.775734 427.007412,192.813077 422.977763,196.85048 L262.044444,351.280377 C260.533325,352.794403 258.518531,353.551405 256,353.551405 C253.481469,353.551405 251.466675,352.794403 249.955556,351.280377 L89.0222371,196.85048 C84.9925876,192.813077 84.9925876,188.775734 89.0222371,184.738331 L112.444457,162.028052 C116.474107,157.990649 120.503696,157.990649 124.533345,162.028052 L256,288.448605 Z" id="icon-down" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
