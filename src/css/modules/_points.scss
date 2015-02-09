@@ -1,0 +1,34 @@
+.points {
+  @extend .container;
+  list-style: none;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  
+  &__item {
+    display: block;
+  
+    &__title {
+      @extend .h2;
+      margin-bottom: 0;
+    }
+    &__summary{
+      color: $points-summary-text-color;
+      @include type-small;
+    }
+  }
+  
+  @include break-desktop {
+    border-left: rem(1px) solid $points-border-color;
+    border-bottom: rem(1px) solid $points-border-color;
+    
+    &__item {
+      padding: 4rem 0;
+      text-align: center;
+      @include span(4); 
+     
+      border-right: rem(1px) solid $points-border-color;
+    }
+  }
+}

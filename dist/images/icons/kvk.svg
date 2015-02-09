@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.3 (252) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/kvk</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icons/kvk" sketch:type="MSArtboardGroup" fill="#3BB3F5">
+            <path d="M199.523233,332 L178.022621,332 L120.723489,258.287278 L104.275521,272.426813 L104.275521,332 L86,332 L86,180 L104.275521,180 L104.275521,255.376197 L175.550051,180 L197.158166,180 L133.946366,246.019152 L199.523233,332 Z M243.354004,332 L198.63273,218.051984 L217.768275,218.051984 L243.138998,285.630643 C248.872523,301.433732 252.240919,311.691723 253.244286,316.404925 L254.10431,316.404925 C254.89267,312.7314 257.383132,305.124545 261.575773,293.584131 C265.768413,282.043718 275.174837,256.866587 289.795327,218.051984 L308.930872,218.051984 L264.209598,332 L243.354004,332 Z M439.737374,332 L418.236761,332 L360.937629,258.287278 L344.489661,272.426813 L344.489661,332 L326.21414,332 L326.21414,180 L344.489661,180 L344.489661,255.376197 L415.764191,180 L437.372306,180 L374.160506,246.019152 L439.737374,332 Z" id="icon-kvk" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+.hero {
+  height: 100%;
+  width: auto;
+  text-align: center;
+  position: relative;
+ 
+  @include background-image(linear-gradient(0deg, rgba(59,179,245,0.00) 17%, rgba(59,178,245,0.00) 72%, #3BB3F5 100%),
+                            linear-gradient(-135deg, rgba(0,255,119,0.55) 0%, rgba(58,179,244,0.55) 32%, rgba(24,221,172,0.15) 50%, rgba(28,216,179,0.20) 59%, rgba(58,179,244,0.55) 66%, rgba(58,179,244,0.55) 89%, rgba(59,178,245,0.55) 100%), 
+                            url("/images/financieel-advies.png"));
+                            
+  @include hidpi(2) {
+    @include background-image(linear-gradient(0deg, rgba(59,179,245,0.00) 17%, rgba(59,178,245,0.00) 72%, #3BB3F5 100%),
+                              linear-gradient(-135deg, rgba(0,255,119,0.55) 0%, rgba(58,179,244,0.55) 32%, rgba(24,221,172,0.15) 50%, rgba(28,216,179,0.20) 59%, rgba(58,179,244,0.55) 66%, rgba(58,179,244,0.55) 89%, rgba(59,178,245,0.55) 100%), 
+                              url("/images/financieel-advies@2x.png"));    
+  }
+  background-size: cover;
+  
+  &__icon {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    @extend %s-icon-beneden;
+    
+    &:after {
+      color: $hero-icon-color;
+    } 
+  }
+} 

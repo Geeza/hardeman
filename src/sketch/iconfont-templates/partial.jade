@@ -1,0 +1,9 @@
+.i-gallery.i-gallery--3-cols
+  <% _.each(glyphs, function(glyph) { %>
+  .i-gallery__item
+    .i-item.i-item--plain.i-icon
+      .i-item__media
+        .i-icon.i-<%= className %>-<%= glyph.name %>.i-icon--strong.i-icon--large
+      .i-item__content
+        .i-item__title <%= glyph.name %>
+        .i-item__description <%= glyph.codepoint.toString(16).toUpperCase() %><% }); %>

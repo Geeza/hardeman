@@ -1,0 +1,27 @@
+.container {
+  @include clearfix;
+
+  @include container;
+  max-width: none;
+  
+  @include break-mobile-landscape {
+		@include container($width-mobile-landscape);
+		max-width: none;
+	}
+	
+	@include break-tablet-portrait {
+		@include container($width-tablet-portrait);
+	}
+
+	@include break-tablet-landscape {
+		@include container($width-tablet-landscape);
+	}
+	
+	@include break-desktop {
+		@include container($width-desktop);
+	}
+}
+
+.row {
+  @extend .container;
+}

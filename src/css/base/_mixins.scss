@@ -1,0 +1,78 @@
+// **************************
+// Grid mixins
+// **************************
+
+@mixin break-mobile-landscape {
+  @include with-layout($susy-mobile-landscape) {
+    @include susy-breakpoint(container($width-mobile-landscape), $width-mobile-landscape) {
+      @content;
+    }
+  }
+}
+
+@mixin break-tablet-portrait {
+  @include with-layout($susy-tablet-portrait) {
+    @include susy-breakpoint(container($width-tablet-portrait), $width-tablet-portrait) {
+      @content;
+    }
+  }
+}
+
+@mixin break-tablet-landscape {
+  @include with-layout($susy-tablet-landscape) {
+    @include susy-breakpoint(container($width-tablet-landscape), $width-tablet-landscape) {
+      @content;
+    }
+  }
+}
+
+@mixin break-desktop {
+  @include with-layout($susy-desktop) {
+    @include susy-breakpoint(container($width-desktop), $width-desktop) {
+      @content;
+    }
+  }
+}
+
+// **************************
+// Typography mixins
+// **************************
+@mixin type-light {
+  font-weight: 300;
+}
+@mixin type-regular {
+  font-weight: 400;
+}
+@mixin type-strong {
+  font-weight: 700;
+}
+
+// Type size variants 
+@mixin type-tiny {
+  font-size: $tiny-font-size;
+  line-height: $tiny-font-leading;
+}
+@mixin type-small {
+  font-size: $small-font-size;
+  line-height: $small-font-leading;
+}
+@mixin type-base {
+  font-size: $base-font-size;
+  line-height: $base-font-leading;
+}
+@mixin type-medium {
+  font-size: $medium-font-size;
+  line-height: $medium-font-leading;
+}
+@mixin type-large {
+  font-size: $large-font-size;
+  line-height: $large-font-leading;
+}
+@mixin type-xlarge {
+  font-size: $xlarge-font-size;
+  line-height: $xlarge-font-leading;
+}
+@mixin type-huge {
+  font-size: $huge-font-size;
+  line-height: $huge-font-leading;
+}

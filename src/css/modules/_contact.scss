@@ -1,0 +1,7 @@
+.contact {
+  @extend .container;
+  
+  .contact__form {
+    @include span(8);
+  }
+}

@@ -6,8 +6,9 @@ html.no-js
     title
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/normalize.min.css')
-    link(rel='stylesheet', href='/css/main.min.css')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700')
+    link(rel='stylesheet', type='text/css', href='/css/site.css')
+    block css
     //-script(src='js/vendor/modernizr-2.7.1.min.js')
   body
     <!--[if lt IE 8]>
@@ -17,8 +18,25 @@ html.no-js
       | to improve your experience.
     <![endif]-->
 
-    //- Add your site or application content here
-    p Hello world! This is HTML5 Boilerplate.
+    block nav
+      header.hero
+        nav(role='navigation').navbar
+          .navbar__brand
+            img(src="/images/logo.svg")
+          ul.navbar__menu
+            li.navbar__menu__item
+              a(href="#diensten") Diensten
+            li.navbar__menu__item
+              a(href="#overmijzelf") Over mijzelf
+            li.navbar__menu__item
+              a(href="#contact") Contact
+            li.navbar__menu__item.navbar__menu__item--cta
+              a(href="#maakeenafspraak") Maak een afspraak
+        
+        .hero__icon
+          
+        
+    block body
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
     script window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')
@@ -33,3 +51,5 @@ html.no-js
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
+        
+    block js

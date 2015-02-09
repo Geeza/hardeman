@@ -1,0 +1,153 @@
+// ******************************
+// Dit .scss bestand niet 
+// handmatig wijzigen
+//
+// Dit bestand wordt gegenereerd
+// ******************************
+@font-face {
+  font-family: "icons";
+  src: url('/fonts/icons.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/icons.woff') format('woff'),
+       url('/fonts/icons.ttf') format('truetype'),
+       url('/fonts/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%s-icon {
+  font-family: "icons";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  color: $icon-color;  
+}
+
+.icon {
+  display: inline-block;
+  
+  &:after,
+  &--before:before {
+    @extend %s-icon;
+  }
+  
+  &--before:after {
+    content: none;
+  }
+  
+  &--strong {
+    &:before, &:after {
+      color: $icon-strong-color;
+    }
+  }
+  
+  &--medium {
+    &:before, &:after {
+      font-size: 3.5rem;
+      line-height: 3.5rem;  
+    }
+  }
+  
+  &--large{
+    &:before, &:after {
+      font-size: 5rem;
+      line-height: 5rem;
+    }
+  }
+  
+  &--huge {
+    &:before, &:after {
+      font-size: 10rem;
+      line-height: 10rem;
+    }
+  }
+}
+
+%s-icon-beneden:after { 
+  content: "\E001";
+  @extend %s-icon;
+}
+%s-icon-calender:after { 
+  content: "\E002";
+  @extend %s-icon;
+}
+%s-icon-doos:after { 
+  content: "\E003";
+  @extend %s-icon;
+}
+%s-icon-email:after { 
+  content: "\E004";
+  @extend %s-icon;
+}
+%s-icon-koffer:after { 
+  content: "\E005";
+  @extend %s-icon;
+}
+%s-icon-kvk:after { 
+  content: "\E006";
+  @extend %s-icon;
+}
+%s-icon-marker:after { 
+  content: "\E007";
+  @extend %s-icon;
+}
+%s-icon-phone:after { 
+  content: "\E008";
+  @extend %s-icon;
+}
+%s-icon-scherm:after { 
+  content: "\E009";
+  @extend %s-icon;
+}
+
+
+
+.icon-beneden {
+  &:after, &.icon--before:before  { 
+    content: "\E001";
+  }
+}
+.icon-calender {
+  &:after, &.icon--before:before  { 
+    content: "\E002";
+  }
+}
+.icon-doos {
+  &:after, &.icon--before:before  { 
+    content: "\E003";
+  }
+}
+.icon-email {
+  &:after, &.icon--before:before  { 
+    content: "\E004";
+  }
+}
+.icon-koffer {
+  &:after, &.icon--before:before  { 
+    content: "\E005";
+  }
+}
+.icon-kvk {
+  &:after, &.icon--before:before  { 
+    content: "\E006";
+  }
+}
+.icon-marker {
+  &:after, &.icon--before:before  { 
+    content: "\E007";
+  }
+}
+.icon-phone {
+  &:after, &.icon--before:before  { 
+    content: "\E008";
+  }
+}
+.icon-scherm {
+  &:after, &.icon--before:before  { 
+    content: "\E009";
+  }
+}

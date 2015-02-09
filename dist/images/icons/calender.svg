@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: bin/sketchtool 1.3 (252) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/calender</title>
+    <desc>Created with bin/sketchtool.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icons/calender" sketch:type="MSArtboardGroup" fill="#3BB3F5">
+            <path d="M100.166667,128.5 L100.166667,185.166667 L411.833333,185.166667 L411.833333,128.5 L100.166667,128.5 Z M341,114.333333 L426,114.333333 L426,426 L86,426 L86,114.333333 L171,114.333333 L171,86 L185.166667,86 L185.166667,114.333333 L326.833333,114.333333 L326.833333,86 L341,86 L341,114.333333 Z M411.833333,411.833333 L411.833333,199.333333 L100.166667,199.333333 L100.166667,411.833333 L411.833333,411.833333 Z M100.166667,185.166667 L100.166667,128.5 L171,128.5 L171,156.833333 L185.166667,156.833333 L185.166667,128.5 L326.833333,128.5 L326.833333,156.833333 L341,156.833333 L341,128.5 L411.833333,128.5 L411.833333,185.166667 L100.166667,185.166667 Z" id="icon-calender" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

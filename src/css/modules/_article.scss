@@ -1,0 +1,9 @@
+.article {
+  padding: 3rem;
+  @include type-light;
+  
+  &__title {
+    @extend .h2;
+    color: $article-title-color;
+  }
+}

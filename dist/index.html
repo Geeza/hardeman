@@ -6,8 +6,8 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/normalize.min.css">
-    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
   </head>
   <body><!--[if lt IE 8]>
     <p class="browsehappy">
@@ -15,7 +15,61 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.
     </p><![endif]-->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <header class="hero">
+      <nav role="navigation" class="navbar">
+        <div class="navbar__brand"><img src="/images/logo.svg"></div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item"><a href="#diensten">Diensten</a></li>
+          <li class="navbar__menu__item"><a href="#overmijzelf">Over mijzelf</a></li>
+          <li class="navbar__menu__item"><a href="#contact">Contact</a></li>
+          <li class="navbar__menu__item navbar__menu__item--cta"><a href="#maakeenafspraak">Maak een afspraak</a></li>
+        </ul>
+      </nav>
+      <div class="hero__icon"></div>
+    </header>
+    <ul class="points">
+      <li class="points__item"><i class="icon icon--medium icon-doos"></i>
+        <h2 class="points__item__title">Verzorgen aangiftes</h2>
+        <div class="points__item__summary">Lorem ipsum dollar set atrem</div>
+      </li>
+      <li class="points__item"><i class="icon icon--medium icon-scherm"></i>
+        <h2 class="points__item__title">Dienstverlening</h2>
+        <div class="points__item__summary">Lorem ipsum dollar set atrem</div>
+      </li>
+      <li class="points__item"><i class="icon icon--medium icon-calender"></i>
+        <h2 class="points__item__title">Financiele plannning</h2>
+        <div class="points__item__summary">Lorem ipsum dollar set atrem</div>
+      </li>
+      <li class="points__item"><i class="icon icon--medium icon-koffer"></i>
+        <h2 class="points__item__title">Interim opdrachten</h2>
+        <div class="points__item__summary">Lorem ipsum dollar set atrem</div>
+      </li>
+    </ul>
+    <div class="about">
+      <div class="about__content about__content--picture"><br></div>
+      <div class="about__content about__content--article">
+        <article class="article">
+          <h2 class="article__title">Over mijzelf</h2>
+          <div class="article__body">
+            <p>Mijn naam is Mike Hardeman en ik ben vanaf het afronden van mijn studie fiscaal recht aan de Universiteit van Tilburg (mei 2006 afgestudeerd) werkzaam in de fiscale adviespraktijk zowel nationaal als internationaal. </p>
+            <p>Wat mij met name boeit aan mijn werk is het persoonlijke contact en het ontzorgen van de klant op fiscaal en financieel gebied. De diensten vermeld op mijn website zijn niet limitatief, maar is een greep uit de werkzaamheden welke ik op financieel en fiscaal gebied voor u kan verrichten.</p>
+            <p>Voel u vrij om mij per e-mail te benaderen of via het contactformulier. Ik zal dan zo spoedig mogelijk contact met u opnemen.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="contact__form">
+        <div id="wufoo-z156zspk1yeii7l">Fill out my <a href="https://nieuwegiessen.wufoo.com/forms/z156zspk1yeii7l">online form</a>
+          <script type="text/javascript">
+            var z156zspk1yeii7l;(function(d, t) { var s = d.createElement(t), options = { 'userName':'nieuwegiessen', 'formHash':'z156zspk1yeii7l', 'autoResize':true, 'height':'497', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true}; s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { z156zspk1yeii7l = new WufooForm();z156zspk1yeii7l.initialize(options);z156zspk1yeii7l.display(); } catch (e) {}}; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script');
+            
+            
+          </script>
+        </div>
+      </div>
+      <div class="contact__info"></div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
   </body>

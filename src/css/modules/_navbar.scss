@@ -1,0 +1,40 @@
+.navbar {
+  @extend .container;
+  
+  @include break-desktop {
+    padding-top: 2rem;
+
+    &__brand {
+      @include span(4);
+    }
+    &__menu {
+      @include span(12);
+      text-align: right;
+      display: block;
+      list-style: none;
+      line-height: 5rem;
+      
+      &__item {
+        line-height: 2rem;
+        display: inline-block;
+        margin-right: 2rem;
+        
+        > a {
+          @include type-light;
+          color: $navbar-link-color;
+          text-decoration: none;
+          
+          &:hover {
+            color: $navbar-link-color-hover;
+          }
+        }
+        
+        &--cta {
+          padding: 0 0.75rem;
+          border: rem(1px) solid $navbar-cta-border-color;
+          border-radius: rem(8px);
+        }
+      }
+    }
+  }
+}

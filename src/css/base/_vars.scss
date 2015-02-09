@@ -1,0 +1,142 @@
+// **************************
+// Variabelen
+// **************************
+
+$blauw: #00ADEE;
+$groen: #00FF75;
+
+$wit: #FFFFFF;
+$zwart: #4A4A4A;
+$grijs-donker: #666666;
+$grijs-licht: #F2F2F2;
+$grijs-lichter: #FAFAFA;
+
+
+$background-color: $wit;
+$text-color: $zwart;
+$link-color: $blauw;
+$link-color-hover: darken($blauw, 10%);
+$title-color: $zwart;
+
+$button-background-color: $blauw;
+$button-border-color: $blauw;
+$button-text-color: $wit;
+
+$button-outline-background-color: $wit;
+$button-outline-border-color: $blauw;
+$button-outline-text-color: $blauw;
+
+$icon-strong-color: $blauw;
+$icon-color: $blauw;
+
+$hero-icon-color: $wit;
+
+$navbar-link-color: $wit;
+$navbar-link-color-hover: $wit;
+$navbar-cta-border-color: $wit;
+
+$points-summary-text-color: $grijs-donker;
+$points-border-color: $grijs-licht;
+
+$article-title-color: $blauw;
+
+
+// Typography
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1.2em;
+
+$base-line-height: 0.5rem;
+$base-font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica-Neue', 'Helvetica', arial, sans-serif;
+
+$tiny-font-size: 0.75rem;
+$tiny-font-leading: 1rem;
+
+$small-font-size: 0.875rem;
+$small-font-leading: 1.5rem;
+
+$base-font-size: 1rem;
+$base-font-leading: 1.5rem;
+
+$medium-font-size: 1.25rem;
+$medium-font-leading: 2rem;
+
+$large-font-size: 1.5rem;
+$large-font-leading: 2rem;
+
+$xlarge-font-size: 2rem;
+$xlarge-font-leading: 2.5rem;
+
+$huge-font-size: 2.5rem;
+$huge-font-leading: 3rem;
+
+
+// **************************
+// Grid
+// **************************
+
+// Grid
+$column-width: 32px;  //1rem;
+$column-width-small: 16px;
+$column-width-medium: 48px;
+$column-width-large: 64px;
+$gutter-width: 1rem;
+$inset-width: 4;
+
+// Width in columns
+$width-mobile-portrait: 8;
+$width-mobile-landscape: 14;
+$width-tablet-portrait: 12;
+$width-tablet-landscape: 16;
+$width-desktop: 16;
+$width-desktop-large: 16;
+
+// 320 / (32 + 8 ) = 8
+$susy: (
+  column-width: $column-width,
+	columns: $width-mobile-portrait,
+	gutters: 0.25,
+	math: fluid,
+	gutter-position: inside
+);
+
+// 448 / (16 + 16 ) = 14
+$susy-mobile-landscape: (
+  column-width: $column-width-small,
+  columns: $width-mobile-landscape,
+  gutters: 1,
+  math: fluid,
+  gutter-position: inside
+);
+
+// 768 / (32 + 32) = 12
+$susy-tablet-portrait: (
+  container: auto,
+  column-width: $column-width,
+  columns: $width-tablet-portrait,
+  gutters: 1,
+  gutter-position: inside
+);
+
+// 1024 / (32 + 32 ) = 16
+$susy-tablet-landscape: (
+  container: auto,
+  column-width: $column-width,
+  columns: $width-tablet-landscape,
+  gutters: 1,
+  gutter-position: inside,
+  use-custom: (
+    rem: true
+  )
+);
+
+// 1280 / ( 48 + 32 ) = 16
+$susy-desktop: (
+  container: auto,
+  column-width: $column-width-medium,
+	columns: $width-desktop,
+	gutters: .66666,
+	gutter-position: inside,
+	use-custom: (
+    rem: true
+  )
+);
