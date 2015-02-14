@@ -16,7 +16,8 @@
       }
       
       &--article {
-
+        border-right: rem(1px) solid $points-border-color;
+        border-bottom: rem(1px) solid $points-border-color;
       }
     }
   }

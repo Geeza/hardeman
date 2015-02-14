@@ -1,0 +1,21 @@
+.info {
+  display: block;
+  list-style: none;
+  padding: 5rem 2rem;
+  margin: 0;
+  
+   @include break-desktop {
+    .info__item {
+      display: block;
+      margin-bottom: 2rem;
+      position: relative;
+      padding: 0 0 0 3rem;
+      
+      .icon {
+        position: absolute;
+        left: 0;
+        top: -0.3rem;
+      }
+    }
+  }
+}

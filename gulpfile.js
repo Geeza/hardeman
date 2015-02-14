@@ -90,7 +90,7 @@ gulp.task('jade', function() {
   return gulp.src(['./src/jade/**/*.jade', '!./src/jade/layout/*.jade'])
     
     // Filter unaffected
-    .pipe(jadeAffected())
+    .pipe(jadeAffected()) 
     
     // Front matter
     .pipe(data(function(file) {

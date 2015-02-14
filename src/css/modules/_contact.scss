@@ -1,7 +1,12 @@
 .contact {
   @extend .container;
   
-  .contact__form {
-    @include span(8);
+   @include break-desktop {
+    .contact__form {
+      @include span(8);
+    }
+    .contact__info {
+      @include span(8 last);
+    }
   }
 }
