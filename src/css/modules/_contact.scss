@@ -1,12 +1,49 @@
 .contact {
+  
   @extend .container;
   
-   @include break-desktop {
+  .contact__form {
+    @include span(full);
+    padding: 2rem;
+    &__title {
+      @extend .h2;
+      color: $contact-title-color;
+      margin-bottom: 0;
+    }
+    
+    &__summary {
+      @include type-light;
+      color: $contact-summary-color;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .contact__info {
+    @include span(full);  
+    padding: 2rem;
+  }
+      
+   @include break-tablet-portrait {
+    
     .contact__form {
-      @include span(8);
+      @include span(7);
+      
+      border-left: rem(1px) solid $contact-border-color;
+      border-right: rem(1px) solid $contact-border-color;
+      border-bottom: rem(1px) solid $contact-border-color;
     }
     .contact__info {
-      @include span(8 last);
+      @include span(5);
+      padding: 4rem 2rem;
+      border-right: rem(1px) solid $contact-border-color;
+      border-bottom: rem(1px) solid $contact-border-color;
+    }
+  }
+  
+  @include break-tablet-landscape {
+    .contact__form, .contact__info {
+      @include span(8);
     }
   }
 }

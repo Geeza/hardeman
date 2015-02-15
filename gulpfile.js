@@ -24,6 +24,7 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     minimist = require('minimist'),
     mqpacker = require('css-mqpacker'),
+    prefix = require('autoprefixer-core'),
     pixrem = require('gulp-pixrem');
  
 var paths = {
@@ -136,7 +137,7 @@ gulp.task('images', function() {
 // Sass (SCSS)
 // ******************************
 gulp.task('sass', function() {
-  
+           
   var stream = gulp.src(path.join(paths.sass, '**/*.scss'));
   
   if (options.env !== 'production') {
@@ -146,7 +147,7 @@ gulp.task('sass', function() {
   stream = stream.pipe(libsass({includePaths: require('node-bourbon').with('./node_modules/susy/sass/'),
                  errLogToConsole: true,
                      outputStyle: 'nested',
-                  sourceComments: (options.env !== 'production')
+                  sourceComments: false
   }))
   .on('error', function(error) {
     // Would like to catch the error here
@@ -155,11 +156,12 @@ gulp.task('sass', function() {
   });
   
   if (options.env !== 'production') {
-    stream = stream.pipe(sourcemaps.write('./'))
+    stream = stream.pipe(postcss([prefix]))  
+                   .pipe(sourcemaps.write('./'))
                    .pipe(gulp.dest('./dist/css/'));
   }
   else {  
-   stream = stream.pipe(postcss([mqpacker]))
+   stream = stream.pipe(postcss([prefix, mqpacker]))
                   .pipe(minifycss())
                   .pipe(gulp.dest('./dist/css/'))
                   .pipe(pixrem())

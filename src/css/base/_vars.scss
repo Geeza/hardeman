@@ -34,12 +34,27 @@ $hero-icon-color: $wit;
 $navbar-link-color: $wit;
 $navbar-link-color-hover: $wit;
 $navbar-cta-border-color: $wit;
+$navbar-stick-background-color: $blauw;
 
-$points-summary-text-color: $grijs-donker;
+$points-title-text-color: $blauw;
+$points-summary-text-color: $zwart;
 $points-border-color: $grijs-licht;
 
 $article-title-color: $blauw;
 
+$contact-border-color: $grijs-licht;
+$contact-title-color: $blauw;
+$contact-summary-color: $grijs-donker;
+
+$form-label-color: $grijs-donker;
+$form-field-border-color: $grijs-licht;
+$form-field-background-color: $grijs-lichter;
+$form-button-border-color: $blauw;
+$form-button-background-color: $blauw;
+$form-button-text-color: $wit;
+$form-button-border-hover-color: darken($blauw, 10%);
+$form-button-background-hover-color: darken($blauw, 10%);
+$form-button-text-hover-color: $wit;
 
 // Typography
 $modular-scale-ratio: $golden;

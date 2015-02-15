@@ -1,7 +1,7 @@
 extends layout/layout.jade
 
 block body
-  ul.points
+  ul.points#diensten(js-auto-height='true',js-animated='true')
     li.points__item
       i.icon.icon--medium.icon-doos
       h2.points__item__title Verzorgen aangiftes
@@ -19,7 +19,7 @@ block body
       h2.points__item__title Interim opdrachten
       .points__item__summary Lorem ipsum dollar set atrem
   
-  .about
+  section.about#over(js-auto-height='true')
     .about__content.about__content--picture
       br/
     .about__content.about__content--article
@@ -29,13 +29,33 @@ block body
           p Mijn naam is Mike Hardeman en ik ben vanaf het afronden van mijn studie fiscaal recht aan de Universiteit van Tilburg (mei 2006 afgestudeerd) werkzaam in de fiscale adviespraktijk zowel nationaal als internationaal. 
           p Wat mij met name boeit aan mijn werk is het persoonlijke contact en het ontzorgen van de klant op fiscaal en financieel gebied. De diensten vermeld op mijn website zijn niet limitatief, maar is een greep uit de werkzaamheden welke ik op financieel en fiscaal gebied voor u kan verrichten.
           p Voel u vrij om mij per e-mail te benaderen of via het contactformulier. Ik zal dan zo spoedig mogelijk contact met u opnemen.
-          
-  .contact
+  
+  section.contact#contact(js-auto-height='true')
     .contact__form
-      br/
-    .contact__info
-      ul.info
+      h2.contact__form__title Maak een afspraak
+      p.contact__form__summary Stuur een bericht of neem contact op
+      
+      form.form(action='//formspree.io/mikehardeman@me.com',method='POST')
         
+        input(name='_gotcha', style='display:none', type='text')
+      
+        .form__group
+          label.control__label Naam
+          input.control__field(type='text',name='name')  
+          
+        .form__group
+          label.control__label E-mail
+          input.control__field(type='email',name='email')    
+        
+        .form__group
+          label.control__label Bericht
+          textarea.control__field.control__field--textarea(name='message')
+        
+        .form__group
+          button.control__button(type='submit') Versturen
+              
+    aside.contact__info
+      ul.info
         li.info__item
           i.icon.icon-email
           a(href='mailto: hallo@mikehardeman.nl') hallo@mikehardeman.nl
@@ -52,4 +72,3 @@ block body
         li.info__item
           i.icon.icon-kvk
           span 62165194
-          

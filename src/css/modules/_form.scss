@@ -1,0 +1,51 @@
+.form {
+  &__group {
+    display: block;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.control {
+  &__label {
+    display: block;
+    @include type-small;
+    margin-bottom: 0.5rem;
+    color: $form-label-color;
+
+
+  }
+  
+  &__field {
+    display: block;
+    width: 100%;
+    @include type-medium;
+    border: rem(1px) solid $form-field-border-color;
+    background: $form-field-background-color;
+    line-height: 3rem;
+    padding-left: 0.25rem;
+    
+    &--textarea {
+      @include type-regular;
+      line-height: 1.5rem;
+      min-height: 9rem;
+    }
+  }
+  
+  &__button {
+    border: rem(1px) solid $form-button-border-color;
+    background: $form-button-background-color;
+    color: $form-button-text-color;
+    border-radius: rem(4px);
+    padding: 0.5rem 3rem;
+    
+    &:hover {
+      border: rem(1px) solid $form-button-border-hover-color;
+      background: $form-button-background-hover-color;
+      color: $form-button-text-hover-color;
+    }
+  }
+}

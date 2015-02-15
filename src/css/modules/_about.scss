@@ -2,23 +2,48 @@
   @extend .container;
   
   &__content {
+    @include span(full);
     
+     &--picture {
+      height: 12rem;
+      @include background-image(linear-gradient(-45deg, rgba(17,231,156,0.50) 0%, rgba(30,214,182,0.10) 6%, rgba(36,207,201,0.00) 36%, rgba(38,206,201,0.05) 45%, rgba(46,197,217,0.40) 72%, rgba(59,179,245,0.40) 100%), 
+                                url("/images/foto-mike.png"));
+                                
+      background-position: right center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
   
-  @include break-desktop {
+  @include break-tablet-portrait {
     &__content {
-      @include span(8);
+     
 
       &--picture {
+        @include span(4);
+        background-position: 80% center;
         height: 28rem;
         @include background-image(linear-gradient(-45deg, rgba(17,231,156,0.50) 0%, rgba(30,214,182,0.10) 6%, rgba(36,207,201,0.00) 36%, rgba(38,206,201,0.05) 45%, rgba(46,197,217,0.40) 72%, rgba(59,179,245,0.40) 100%), 
                                   url("/images/foto-mike.png"));
       }
       
       &--article {
+        @include span(8);
         border-right: rem(1px) solid $points-border-color;
         border-bottom: rem(1px) solid $points-border-color;
       }
     }
+  }
+  
+  @include break-tablet-landscape {
+    &__content {
+      &--picture {
+        @include span(8); 
+        background-position: right center;
+      }
+      &--article {
+        @include span(8); 
+      }
+    }  
   }
 }

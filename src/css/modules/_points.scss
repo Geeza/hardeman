@@ -4,31 +4,75 @@
   display: block;
   margin-top: 0;
   margin-bottom: 0;
+  border-bottom: rem(1px) solid $points-border-color;
   padding: 0;
   
   &__item {
+    @include span(full); 
     display: block;
-  
+    text-align: center;
+    padding: 2rem 0;
+    
     &__title {
       @extend .h2;
-      margin-bottom: 0;
+      @include type-regular;
+      margin: 0;
+      color: $points-title-text-color;
     }
     &__summary{
       color: $points-summary-text-color;
       @include type-small;
+      @include type-light;
+    }
+  }
+  
+  @include break-mobile-landscape {
+    border-left: rem(1px) solid $points-border-color;
+    border-right: rem(1px) solid $points-border-color;
+    
+    &__item {
+      @include span(7);  
+    }
+  }
+  
+  @include break-tablet-portrait {
+    
+    &__item {
+      .js & {
+        opacity: 0;
+      }
+      
+      .js-animate & {
+         animation: fadeInDown 0.3s;
+         animation-fill-mode: forwards;
+      }  
+      
+      @include span(6); 
+    }
+  }
+  
+  @include break-tablet-landscape {
+    &__item {
+      @include span(4); 
+      padding: 4rem 0;
     }
   }
   
   @include break-desktop {
-    border-left: rem(1px) solid $points-border-color;
-    border-bottom: rem(1px) solid $points-border-color;
-    
     &__item {
-      padding: 4rem 0;
-      text-align: center;
       @include span(4); 
-     
-      border-right: rem(1px) solid $points-border-color;
     }
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
