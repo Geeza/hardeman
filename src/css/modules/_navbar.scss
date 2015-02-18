@@ -28,7 +28,6 @@
       margin-right: 2rem;
       
       > a {
-        @include type-light;
         color: $navbar-link-color;
         text-decoration: none;
         

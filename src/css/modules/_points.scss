@@ -15,14 +15,12 @@
     
     &__title {
       @extend .h2;
-      @include type-regular;
       margin: 0;
       color: $points-title-text-color;
     }
     &__summary{
       color: $points-summary-text-color;
       @include type-small;
-      @include type-light;
     }
   }
   

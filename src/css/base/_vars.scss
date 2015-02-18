@@ -60,8 +60,11 @@ $form-button-text-hover-color: $wit;
 $modular-scale-ratio: $golden;
 $modular-scale-base: 1.2em;
 
-$base-line-height: 0.5rem;
+$base-line-height: 1.5rem;
 $base-font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica-Neue', 'Helvetica', arial, sans-serif;
+
+$base-font-size: 16px;
+$base-font-leading: 1.5rem;
 
 $tiny-font-size: 0.75rem;
 $tiny-font-leading: 1rem;
@@ -69,8 +72,7 @@ $tiny-font-leading: 1rem;
 $small-font-size: 0.875rem;
 $small-font-leading: 1.5rem;
 
-$base-font-size: 1rem;
-$base-font-leading: 1.5rem;
+
 
 $medium-font-size: 1.25rem;
 $medium-font-leading: 2rem;

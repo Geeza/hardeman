@@ -2,12 +2,16 @@
 html {
   height: 100%;
   height: 100vh;
+  font-size: $base-font-size;
+  line-height: 1.5rem;
 }
 body, 
 .root {
   min-height:100%;
+}
+body {
   font-family: 'Roboto', sans-serif;
-  @include type-regular;
+  @include type-light;
 }
 
 a {
