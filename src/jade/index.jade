@@ -1,39 +1,64 @@
 extends layout/layout.jade
 
 block body
+ 
   ul.points#diensten(js-auto-height='true',js-animated='true')
     li.points__item
       i.icon.icon--medium.icon-doos
-      h2.points__item__title Verzorgen aangiftes
-      .points__item__summary Het opstellen van de jaarrekening tot aan correspondentie met de belastingdienst
+      h2.points__item__title Verzorgen belastingaangifte
+      .points__item__summary
+        ul.bullets
+          li.bullets__item Verzorgen aangifte zowel zakelijk als privé
+          li.bullets__item Aangifte 
+            abbr(title='Erfbelasting') erf- 
+            | en inkomstenbelasting
+          li.bullets__item Aangifte 
+            abbr(title='Omzetbelasting') omzet- 
+            | en vennootschapsbelasting
+        
     li.points__item
       i.icon.icon--medium.icon-scherm
-      h2.points__item__title Dienstverlening
-      .points__item__summary Lorem ipsum dollar set atrem
+      h2.points__item__title Administratieve dienstverlening
+      .points__item__summary
+        ul.bullets
+          li.bullets__item Maandelijkse financiële- en salaris administratie 
+          li.bullets__item Opstellen jaarrekening en Deponering bij Kamer van Koophandel
+          li.bullets__item Correspondentie met de belastingdienst
+    
     li.points__item
       i.icon.icon--medium.icon-calender
       h2.points__item__title Financiële plannning
-      .points__item__summary Lorem ipsum dollar set atrem
-    li.points__item
-      i.icon.icon--medium.icon-koffer
-      h2.points__item__title Interim opdrachten
-      .points__item__summary Lorem ipsum dollar set atrem
+      .points__item__summary
+        ul.bullets
+          li.bullets__item In kaart brengen van uw oudedags- voorziening
+          li.bullets__item Opstellen van een pensioenplanning
+          li.bullets__item Het begrijpelijk maken van de pensioenmaterie
+        
+
   
   section.about#over(js-auto-height='true')
     .about__content.about__content--picture
       br/
+      
     .about__content.about__content--article
       article.article
         h2.article__title Over mijzelf
         .article__body
-          p Mijn naam is Mike Hardeman en ik ben vanaf het afronden van mijn studie fiscaal recht aan de Universiteit van Tilburg (mei 2006 afgestudeerd) werkzaam in de fiscale adviespraktijk zowel nationaal als internationaal. 
-          p Wat mij met name boeit aan mijn werk is het persoonlijke contact en het ontzorgen van de klant op fiscaal en financieel gebied. De diensten vermeld op mijn website zijn niet limitatief, maar is een greep uit de werkzaamheden welke ik op financieel en fiscaal gebied voor u kan verrichten.
-          p Voel u vrij om mij per e-mail te benaderen of via het contactformulier. Ik zal dan zo spoedig mogelijk contact met u opnemen.
+          p Mijn naam is Mike Hardeman en ik ben sinds het jaar 2006 werkzaam als fiscalist zowel in de nationale als in de internationale praktijk. Wat mij motiveert is het ontzorgen van de klant op fiscaal en financieel gebied. Communicatie staat daarbij centraal. 
+          p Mijn speerpunt is dat de klant in het gehele werkproces altijd geinformeerd moet zijn om mijn meerwaarde voor hem of haar betekenis te geven. 
+          p Nieuwsgierig welke fiscale en financiele diensten ik voor u kan leveren? Neem dan vrijblijvend 
+            a(href='#contact') contact 
+            | met mij op. Ik ben u graag van dienst! 
+          h3 Tarief
+          p Mijn werkzaamheden verricht ik op basis van een uurtarief inclusief BTW. Een opdracht voorzie ik altijd vooraf vrijblijvend van een offerte.
+          
+          h3 Interim opdrachten
+          p Lorem ipsum 
   
   section.contact#contact(js-auto-height='true')
-    .contact__form
-      h2.contact__form__title Maak een afspraak
-      p.contact__form__summary Stuur een bericht of neem contact op
+    .contact__section--form
+      h2.contact__title Maak een afspraak
+      p.contact__summary Stuur een bericht of neem contact op
       
       form.form(action='//formspree.io/mikehardeman@me.com',method='POST')
         
@@ -54,11 +79,15 @@ block body
         .form__group
           button.control__button(type='submit') Versturen
               
-    aside.contact__info
+    aside.contact__section--info
       ul.info
         li.info__item
           i.icon.icon-email
-          a(href='mailto: hallo@mikehardeman.nl') hallo@mikehardeman.nl
+          a(href='mailto: mikehardeman@me.com') mikehardeman@me.com
+                  
+        li.info__item
+          i.icon.icon-linkedin
+          a(href='https://linkedin.com/mikehardeman') Linkedin profiel
         
         li.info__item
           i.icon.icon-phone
@@ -72,3 +101,5 @@ block body
         li.info__item
           i.icon.icon-kvk
           span 62165194
+          
+      .contact__picture

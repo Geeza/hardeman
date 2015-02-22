@@ -2,46 +2,66 @@
   
   @extend .container;
   
-  .contact__form {
-    @include span(full);
-    padding: 2rem;
-    &__title {
-      @extend .h2;
-      color: $contact-title-color;
-      margin-bottom: 0;
-    }
-    
-    &__summary {
-      color: $contact-summary-color;
-      margin-top: 0;
-      margin-bottom: 2rem;
-    }
+  &__title {
+    @extend .h2;
+    color: $contact-title-color;
+    margin-bottom: 0;
+    padding: 2rem 2rem 0 2rem;
   }
   
-  .contact__info {
-    @include span(full);  
-    padding: 2rem;
+  &__summary {
+    color: $contact-summary-color;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+  
+  &__picture {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    height: 14rem;
+    width: 100%;
+    @include background-image(linear-gradient(-45deg, rgba(17,231,156,0.50) 0%, rgba(30,214,182,0.10) 6%, rgba(36,207,201,0.00) 36%, rgba(38,206,201,0.05) 45%, rgba(46,197,217,0.40) 72%, rgba(59,179,245,0.40) 100%), 
+                          url("/images/contact.png"));
+                          
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -1rem;
   }
       
+  &__section {
+    
+    &--form {
+      @include span(full);
+    }
+    
+    &--info {
+      @include span(full);
+      position: relative;  
+      padding-bottom: 14rem;
+    }
+  }      
    @include break-tablet-portrait {
     
-    .contact__form {
+    &__section--form {
       @include span(7);
       
       border-left: rem(1px) solid $contact-border-color;
       border-right: rem(1px) solid $contact-border-color;
       border-bottom: rem(1px) solid $contact-border-color;
     }
-    .contact__info {
+    
+    &__section--info {
       @include span(5);
-      padding: 4rem 2rem;
       border-right: rem(1px) solid $contact-border-color;
       border-bottom: rem(1px) solid $contact-border-color;
     }
   }
   
   @include break-tablet-landscape {
-    .contact__form, .contact__info {
+    &__section--form, &__section--info {
       @include span(8);
     }
   }

@@ -11,7 +11,7 @@
     @include span(full); 
     display: block;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0rem;
     
     &__title {
       @extend .h2;
@@ -19,8 +19,7 @@
       color: $points-title-text-color;
     }
     &__summary{
-      color: $points-summary-text-color;
-      @include type-small;
+      margin: 0 1rem;
     }
   }
   
@@ -36,8 +35,9 @@
   @include break-tablet-portrait {
     
     &__item {
-      .js & {
+      .js &.js-animate {
         opacity: 0;
+        transform: translateZ(0);
       }
       
       .js-animate & {
@@ -52,13 +52,13 @@
   @include break-tablet-landscape {
     &__item {
       @include span(4); 
-      padding: 4rem 0;
+      padding: 4rem 2rem;
     }
   }
   
   @include break-desktop {
     &__item {
-      @include span(4); 
+      @include span(5.3); 
     }
   }
 }

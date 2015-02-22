@@ -45,6 +45,13 @@
     }
   }
   
+  &--small {
+    &:before, &:after {
+      font-size: 1rem;
+      line-height: 1rem;  
+    }
+  }
+  
   &--medium {
     &:before, &:after {
       font-size: 3.5rem;
@@ -75,32 +82,40 @@
   content: "\E002";
   @extend %s-icon;
 }
-%s-icon-doos:after { 
+%s-icon-checkmark:after { 
   content: "\E003";
   @extend %s-icon;
 }
-%s-icon-email:after { 
+%s-icon-doos:after { 
   content: "\E004";
   @extend %s-icon;
 }
-%s-icon-koffer:after { 
+%s-icon-email:after { 
   content: "\E005";
   @extend %s-icon;
 }
-%s-icon-kvk:after { 
+%s-icon-koffer:after { 
   content: "\E006";
   @extend %s-icon;
 }
-%s-icon-marker:after { 
+%s-icon-kvk:after { 
   content: "\E007";
   @extend %s-icon;
 }
-%s-icon-phone:after { 
+%s-icon-linkedin:after { 
   content: "\E008";
   @extend %s-icon;
 }
-%s-icon-scherm:after { 
+%s-icon-marker:after { 
   content: "\E009";
+  @extend %s-icon;
+}
+%s-icon-phone:after { 
+  content: "\E00A";
+  @extend %s-icon;
+}
+%s-icon-scherm:after { 
+  content: "\E00B";
   @extend %s-icon;
 }
 
@@ -116,38 +131,48 @@
     content: "\E002";
   }
 }
-.icon-doos {
+.icon-checkmark {
   &:after, &.icon--before:before  { 
     content: "\E003";
   }
 }
-.icon-email {
+.icon-doos {
   &:after, &.icon--before:before  { 
     content: "\E004";
   }
 }
-.icon-koffer {
+.icon-email {
   &:after, &.icon--before:before  { 
     content: "\E005";
   }
 }
-.icon-kvk {
+.icon-koffer {
   &:after, &.icon--before:before  { 
     content: "\E006";
   }
 }
-.icon-marker {
+.icon-kvk {
   &:after, &.icon--before:before  { 
     content: "\E007";
   }
 }
-.icon-phone {
+.icon-linkedin {
   &:after, &.icon--before:before  { 
     content: "\E008";
   }
 }
-.icon-scherm {
+.icon-marker {
   &:after, &.icon--before:before  { 
     content: "\E009";
+  }
+}
+.icon-phone {
+  &:after, &.icon--before:before  { 
+    content: "\E00A";
+  }
+}
+.icon-scherm {
+  &:after, &.icon--before:before  { 
+    content: "\E00B";
   }
 }

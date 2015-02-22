@@ -1,0 +1,28 @@
+.bullets {
+  text-align: left;
+  display: block;
+  list-style: none;
+  padding: 1rem;
+  
+  &__item {
+    display: block;
+    @extend .icon;
+    @extend .icon-checkmark;
+    @extend .icon--small;
+    padding-left: 1.5rem;
+    position: relative;
+    color: $points-summary-text-color;
+    @include type-regular;
+    @include type-light;
+    
+    &:after {
+      position: absolute;
+      left: 0;
+      top: rem(4px);
+    }
+  }
+  
+  &__item + &__item {
+    margin-top: .5rem;
+  }
+}

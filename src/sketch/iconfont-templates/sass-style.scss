@@ -45,6 +45,13 @@
     }
   }
   
+  &--small {
+    &:before, &:after {
+      font-size: 1rem;
+      line-height: 1rem;  
+    }
+  }
+  
   &--medium {
     &:before, &:after {
       font-size: 3.5rem;
