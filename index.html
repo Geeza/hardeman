@@ -1,18 +1,125 @@
-<!doctype html>
-<title>Site onderhoud</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
- 
-<article>
-    <h1>Binnenkort online!</h1>
-    <div>
-		<p>Excuses voor het ongemak maar we zijn bezig de webite te bouwen. Als het nodig is kun je altijd <a href="mailto:mikehardeman@me.com">contact opnemen</a>.
-        <p>&mdash; Mike Hardeman</p>
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mike Hardeman</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400italic,400,300,500,700">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+  </head>
+  <body class="js-parent">
+    <div role="main" class="root"><!--[if lt IE 8]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a>
+        to improve your experience.
+      </p><![endif]-->
+      <header class="hero">
+        <nav role="navigation" class="navbar js-stick-in-parent">
+          <div class="container">
+            <div class="navbar__brand"><img src="/images/logo.svg"></div>
+            <ul class="navbar__menu">
+              <li class="navbar__menu__item"><a href="#diensten">Diensten</a></li>
+              <li class="navbar__menu__item"><a href="#over">Over mijzelf</a></li>
+              <li class="navbar__menu__item"><a href="#contact">Contact</a></li>
+              <li class="navbar__menu__item navbar__menu__item--cta"><a href="#contact">Maak een afspraak</a></li>
+            </ul>
+          </div>
+        </nav><a href="#diensten" class="hero__icon"></a>
+      </header>
+      <ul id="diensten" js-auto-height="true" js-animated="true" class="points">
+        <li class="points__item"><i class="icon icon--medium icon-doos"></i>
+          <h2 class="points__item__title">Verzorgen belastingaangifte</h2>
+          <div class="points__item__summary">
+            <ul class="bullets">
+              <li class="bullets__item">Verzorgen aangifte zowel zakelijk als privé</li>
+              <li class="bullets__item">Aangifte <abbr title="Erfbelasting">erf- </abbr>en inkomstenbelasting</li>
+              <li class="bullets__item">Aangifte <abbr title="Omzetbelasting">omzet- </abbr>en vennootschapsbelasting</li>
+            </ul>
+          </div>
+        </li>
+        <li class="points__item"><i class="icon icon--medium icon-scherm"></i>
+          <h2 class="points__item__title">Administratieve dienstverlening</h2>
+          <div class="points__item__summary">
+            <ul class="bullets">
+              <li class="bullets__item">Maandelijkse financiële- en salaris administratie </li>
+              <li class="bullets__item">Opstellen jaarrekening en Deponering bij Kamer van Koophandel</li>
+              <li class="bullets__item">Correspondentie met de belastingdienst</li>
+            </ul>
+          </div>
+        </li>
+        <li class="points__item"><i class="icon icon--medium icon-calender"></i>
+          <h2 class="points__item__title">Financiële plannning</h2>
+          <div class="points__item__summary">
+            <ul class="bullets">
+              <li class="bullets__item">In kaart brengen van uw oudedags- voorziening</li>
+              <li class="bullets__item">Opstellen van een pensioenplanning</li>
+              <li class="bullets__item">Het begrijpelijk maken van de pensioenmaterie</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <section id="over" js-auto-height="true" class="about">
+        <div class="about__content about__content--picture"><br></div>
+        <div class="about__content about__content--article">
+          <article class="article">
+            <h2 class="article__title">Over mijzelf</h2>
+            <div class="article__body">
+              <p>Mijn naam is Mike Hardeman en ik ben sinds het jaar 2006 werkzaam als fiscalist zowel in de nationale als in de internationale praktijk. Wat mij motiveert is het ontzorgen van de klant op fiscaal en financieel gebied. Communicatie staat daarbij centraal. </p>
+              <p>Mijn speerpunt is dat de klant in het gehele werkproces altijd geinformeerd moet zijn om mijn meerwaarde voor hem of haar betekenis te geven. </p>
+              <p>Nieuwsgierig welke fiscale en financiele diensten ik voor u kan leveren? Neem dan vrijblijvend <a href="#contact">contact </a>met mij op. Ik ben u graag van dienst! </p>
+              <h3>Tarief</h3>
+              <p>Mijn werkzaamheden verricht ik op basis van een uurtarief inclusief BTW. Een opdracht voorzie ik altijd vooraf vrijblijvend van een offerte.</p>
+              <h3>Interim opdrachten</h3>
+              <p>Lorem ipsum </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="contact" js-auto-height="true" class="contact">
+        <div class="contact__section--form">
+          <h2 class="contact__title">Maak een afspraak</h2>
+          <p class="contact__summary">Stuur een bericht of neem contact op</p>
+          <form action="//formspree.io/mikehardeman@me.com" method="POST" class="form">
+            <input name="_gotcha" style="display:none" type="text">
+            <div class="form__group">
+              <label class="control__label">Naam</label>
+              <input type="text" name="name" class="control__field">
+            </div>
+            <div class="form__group">
+              <label class="control__label">E-mail</label>
+              <input type="email" name="email" class="control__field">
+            </div>
+            <div class="form__group">
+              <label class="control__label">Bericht</label>
+              <textarea name="message" class="control__field control__field--textarea"></textarea>
+            </div>
+            <div class="form__group">
+              <button type="submit" class="control__button">Versturen</button>
+            </div>
+          </form>
+        </div>
+        <aside class="contact__section--info">
+          <ul class="info">
+            <li class="info__item"><i class="icon icon-email"></i><a href="mailto: mikehardeman@me.com">mikehardeman@me.com</a></li>
+            <li class="info__item"><i class="icon icon-linkedin"></i><a href="https://linkedin.com/mikehardeman">Linkedin profiel</a></li>
+            <li class="info__item"><i class="icon icon-phone"></i><span>+31 617140782</span></li>
+            <li class="info__item"><i class="icon icon-marker"></i>
+              <address>Cavalerieweg 98</address>
+              <address>3902JP Veenendaal</address>
+            </li>
+            <li class="info__item"><i class="icon icon-kvk"></i><span>62165194</span></li>
+          </ul>
+          <div class="contact__picture"></div>
+        </aside>
+      </section>
     </div>
-</article>
+    <script src="/js/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/lib/matchHeight/jquery.matchHeight-min.js"></script>
+    <script src="/js/lib/sticky-kit/jquery.sticky-kit.min.js"></script>
+    <script src="/js/scripts.min.js"></script>
+    <jquery class="min js"></jquery>
+  </body>
+</html>
