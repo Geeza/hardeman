@@ -1,105 +1,169 @@
-extends layout/layout.jade
-
-block body
- 
-  ul.points#diensten(js-auto-height='true',js-animated='true')
-    li.points__item
-      i.icon.icon--medium.icon-doos
-      h2.points__item__title Verzorgen belastingaangifte
-      .points__item__summary
-        ul.bullets
-          li.bullets__item Verzorgen aangifte zowel zakelijk als privé
-          li.bullets__item Aangifte 
-            abbr(title='Erfbelasting') erf- 
-            | en inkomstenbelasting
-          li.bullets__item Aangifte 
-            abbr(title='Omzetbelasting') omzet- 
-            | en vennootschapsbelasting
-        
-    li.points__item
-      i.icon.icon--medium.icon-scherm
-      h2.points__item__title Administratieve dienstverlening
-      .points__item__summary
-        ul.bullets
-          li.bullets__item Maandelijkse financiële- en salaris administratie 
-          li.bullets__item Opstellen jaarrekening en Deponering bij Kamer van Koophandel
-          li.bullets__item Correspondentie met de belastingdienst
-    
-    li.points__item
-      i.icon.icon--medium.icon-calender
-      h2.points__item__title Financiële plannning
-      .points__item__summary
-        ul.bullets
-          li.bullets__item In kaart brengen van uw oudedags- voorziening
-          li.bullets__item Opstellen van een pensioenplanning
-          li.bullets__item Het begrijpelijk maken van de pensioenmaterie
-        
-
+doctype
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Mike Hardeman
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Roboto:400italic,400,300,500,700')
+    link(rel='stylesheet', type='text/css', href='/css/site.css')
+    block css
   
-  section.about#over(js-auto-height='true')
-    .about__content.about__content--picture
-      br/
-      
-    .about__content.about__content--article
-      article.article
-        h2.article__title Over mijzelf
-        .article__body
-          p Mijn naam is Mike Hardeman en ik ben sinds het jaar 2006 werkzaam als fiscalist zowel in de nationale als in de internationale praktijk. Wat mij motiveert is het ontzorgen van de klant op fiscaal en financieel gebied. Communicatie staat daarbij centraal. 
-          p Mijn speerpunt is dat de klant in het gehele werkproces altijd geinformeerd moet zijn om mijn meerwaarde voor hem of haar betekenis te geven. 
-          p Nieuwsgierig welke fiscale en financiele diensten ik voor u kan leveren? Neem dan vrijblijvend 
-            a(href='#contact') contact 
-            | met mij op. Ik ben u graag van dienst! 
-          h3 Tarief
-          p Mijn werkzaamheden verricht ik op basis van een uurtarief inclusief BTW. Een opdracht voorzie ik altijd vooraf vrijblijvend van een offerte.
-          
-          h3 Interim opdrachten
-          p Lorem ipsum 
+  body.js-parent
+    .root(role='main')
+      <!--[if lt IE 8]>
+      p.browsehappy
+        | You are using an <strong>outdated</strong> browser.
+        | Please <a href="http://browsehappy.com/">upgrade your browser</a>
+        | to improve your experience.
+      <![endif]-->
   
-  section.contact#contact(js-auto-height='true')
-    .contact__section--form
-      h2.contact__title Maak een afspraak
-      p.contact__summary Stuur een bericht of neem contact op
-      
-      form.form(action='//formspree.io/mikehardeman@me.com',method='POST')
-        
-        input(name='_gotcha', style='display:none', type='text')
-      
-        .form__group
-          label.control__label Naam
-          input.control__field(type='text',name='name')  
-          
-        .form__group
-          label.control__label E-mail
-          input.control__field(type='email',name='email')    
-        
-        .form__group
-          label.control__label Bericht
-          textarea.control__field.control__field--textarea(name='message')
-        
-        .form__group
-          button.control__button(type='submit') Versturen
-              
-    aside.contact__section--info
-      ul.info
-        li.info__item
-          i.icon.icon-email
-          a(href='mailto: mikehardeman@me.com') mikehardeman@me.com
+      block nav
+        header.hero
+          nav(role='navigation').navbar.js-stick-in-parent
+            .container
+              .navbar__brand
+                picture.navbar__brand__regular
+                  source(media='(min-width: 480px)', srcset='/images/logo.svg')
+                  source(srcset='/images/logo--small.svg')
+                  img(src="/images/logo--small.svg")
+                .navbar__brand__sticky
+                  img(src="/images/logo--small.svg")
                   
-        li.info__item
-          i.icon.icon-linkedin
-          a(href='https://linkedin.com/mikehardeman') Linkedin profiel
-        
-        li.info__item
-          i.icon.icon-phone
-          span +31 617140782
+              ul.navbar__menu
+                li.navbar__menu__item
+                  a(href="#diensten", data-scroll-spy='link') Diensten
+                li.navbar__menu__item
+                  a(href="#over", data-scroll-spy='link') Over mijzelf
+                li.navbar__menu__item
+                  a(href="#contact", data-scroll-spy='link') Contact
+                li.navbar__menu__item.navbar__menu__item--cta
+                  a(href="#contact") Maak een afspraak
           
-        li.info__item
-          i.icon.icon-marker
-          address Cavalerieweg 98
-          address 3902JP Veenendaal
-        
-        li.info__item
-          i.icon.icon-kvk
-          span 62165194
+
+          a.hero__icon(href="#diensten")
           
-      .contact__picture
+      block body
+        .services#diensten(data-scroll-spy='target')
+          header.article.article--center
+            h2.article__title.article__title--large Specialist op fiscaal en financieel gebied
+            p.article__summary Wat kan ik voor u betekenen?
+          ul.points(js-auto-height='true',js-animated='true')
+            li.points__item
+              i.icon.icon--medium.icon-doos
+              h2.points__item__title Verzorgen belastingaangifte
+              .points__item__summary
+                ul.bullets
+                  li.bullets__item Aangifte inkomstenbelasting
+                  li.bullets__item Aangifte vennootschapsbelasting 
+                  li.bullets__item Aangifte omzetbelasting
+                
+            li.points__item
+              i.icon.icon--medium.icon-scherm
+              h2.points__item__title Administratieve dienstverlening
+              .points__item__summary
+                ul.bullets
+                  li.bullets__item Maandelijkse financiële- en salaris administratie 
+                  li.bullets__item Opstellen jaarrekening en deponering bij Kamer van Koophandel
+                  li.bullets__item Correspondentie met de belastingdienst
+            
+            li.points__item
+              i.icon.icon--medium.icon-calender
+              h2.points__item__title Financiële plannning
+              .points__item__summary
+                ul.bullets
+                  li.bullets__item In kaart brengen van uw oudedags- voorziening
+                  li.bullets__item Opstellen van een pensioenplanning
+                  li.bullets__item Het begrijpelijk maken van de pensioenmaterie
+              
+      
+        
+        section.about#over(js-auto-height='true',data-scroll-spy='target')
+          .about__content.about__content--picture
+    
+            
+          .about__content.about__content--article
+            article.article
+              h2.article__title Over mijzelf
+              .article__body
+                p Mijn naam is Mike Hardeman en ik ben sinds het jaar 2006 werkzaam als belastingadviseur zowel in de nationale als in de internationale praktijk. Wat mij motiveert is het ontzorgen van de klant op fiscaal en financieel gebied. Communicatie staat daarbij centraal. 
+                p Mijn speerpunt is dat de klant in het gehele werkproces altijd geinformeerd moet zijn om mijn meerwaarde voor hem of haar betekenis te geven. 
+                p Nieuwsgierig welke fiscale en/of financiele diensten ik voor u kan verrichten? Neem dan vrijblijvend 
+                  a#contact_link(href='#contact') contact 
+                  | met mij op. Ik ben u graag van dienst! 
+                h3 Tarief
+                p Mijn werkzaamheden verricht ik op basis van een uurtarief inclusief BTW. Een opdracht voorzie ik altijd vooraf vrijblijvend van een offerte.
+                
+        
+        section.contact#contact(js-auto-height='true',data-scroll-spy='target')
+          .contact__section--form
+            h2.contact__title Maak een afspraak
+            p.contact__summary Stuur een bericht zodat we nader kennis kunnen maken
+            
+            form.form#contact_form(action='//formspree.io/mikehardeman@me.com',method='POST')
+              
+              input(name='_gotcha', style='display:none', type='text')
+              input(name='_next', value='//bureauhardeman.nl/bedankt.html', type='hidden')
+              
+              .form__group
+                label.control__label Bericht
+                textarea.control__field.control__field--textarea(name='message')
+                
+              .form__group
+                label.control__label Naam
+                input.control__field(type='text',name='name')  
+                
+              .form__group
+                label.control__label E-mail
+                input.control__field(type='email',name='email')    
+          
+              .form__group
+                button.control__button#send_button(type='submit') Versturen
+                    
+          aside.contact__section--info
+            ul.info
+              li.info__item
+                i.icon.icon-email
+                a(href='mailto: mikehardeman@me.com') mikehardeman@me.com
+                        
+              li.info__item
+                i.icon.icon-linkedin
+                a(href='https://linkedin.com/mikehardeman') Linkedin profiel
+              
+              li.info__item
+                i.icon.icon-phone
+                span +31 617140782
+                
+              li.info__item
+                i.icon.icon-marker
+                address Cavalerieweg 98
+                address 3902JP Veenendaal
+              
+              li.info__item
+                i.icon.icon-kvk
+                span 62165194
+                
+            .contact__picture
+            
+      block footer
+        footer.footer
+          .copyright &copy; 2015 Advies Bureau Hardeman 
+        
+      script(src='/js/lib/jquery/dist/jquery.min.js')
+      script(src='/js/lib/matchHeight/jquery.matchHeight-min.js')
+      script(src='/js/lib/sticky-kit/jquery.sticky-kit.min.js')
+      script(src='/js/lib/jquery-validation/dist/jquery.validate.min.js')
+      script(src='/js/scripts.min.js')
+  
+      //-
+        script
+          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+          e.src='//www.google-analytics.com/analytics.js';
+          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+          ga('create','UA-XXXXX-X');ga('send','pageview');
+      
+      jquery.min.js
+      block js

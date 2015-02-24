@@ -11,6 +11,43 @@ $(function() {
       this.sticky.init();
       this.scrollSpy.init();
       this.animated.init();
+      this.form.init();
+    },
+    
+    form: {
+      init: function() {
+        $('.form').validate({
+          rules: {
+            message: {
+               required: true
+            },
+            name: {
+              required: true
+            },
+            email: {
+              required: true,
+              email: true
+            }
+          },
+          messages: {
+            message: {
+               required: 'U bent vergeten een bericht te typen'
+            },
+            name: {
+              required: 'U bent vergeten uw naam te typen'
+            },
+            email: {
+              required: 'U heeft zo te zien niet een geldig e-mail adres ingevuld',
+              email: 'U heeft zo te zien niet een geldig e-mail adres ingevuld'
+            }
+          },
+          errorElement: 'em'
+        });
+      },
+      
+      validate: function() {
+        
+      }
     },
     
     bookmarks: {
@@ -46,13 +83,17 @@ $(function() {
     
     sticky: {
       init: function() {
+        var mq = window.matchMedia('all and (min-width: 1024px)');
+        if(!mq.matches) {
+          return;
+        }
         if($.fn.stick_in_parent) {
           $('.js-stick-in-parent').stick_in_parent({parent: '.js-parent'})
             .on("sticky_kit:stick", function(e) {
-              $('.navbar__brand > img').attr('src', '/images/logo--small.svg');
+//               $('.navbar__brand > picture img').attr('src', '/images/logo--small.svg');
             })
             .on("sticky_kit:unstick", function(e) {
-              $('.navbar__brand > img').attr('src', '/images/logo.svg');
+//               $('.navbar__brand > picture img').attr('src', '/images/logo.svg');
             });
         }
       }
@@ -60,8 +101,13 @@ $(function() {
     
     scrollSpy: {
       init: function() {
-        var $targets = $('[data-scroll-spy="target"]');
+        var mq = window.matchMedia('all and (min-width: 768px)');
+        if(!mq.matches) {
+          return;
+        }
         
+        var $targets = $('[data-scroll-spy="target"]');
+      
         if($targets.length == 0) return;
        
         $(window).scroll(function() {
@@ -74,7 +120,9 @@ $(function() {
             if(ui.isInView($target) ) {
               var $newActivelink = $('a[href="#' + $id + '"][data-scroll-spy="link"]'),
                   $curActivelink = $('a.js-active[href!="#' + $id + '"][data-scroll-spy="link"]');
-                  
+              
+              
+              
               $curActivelink.removeClass('js-active');
               $newActivelink.addClass('js-active');
             }
@@ -98,8 +146,8 @@ $(function() {
       
     isInView: function($target) {
 
-      var $elTopOffset = $target.offset().top - ($target.outerHeight() / 3) - 100,
-          $elLowOffset = $target.offset().top + $target.outerHeight() + 100;
+      var $elTopOffset = $target.offset().top - ($target.outerHeight() / 3),
+          $elLowOffset = $target.offset().top + $target.outerHeight();
     
 
       if(window.pageYOffset >= $elTopOffset && window.pageYOffset < $elLowOffset){

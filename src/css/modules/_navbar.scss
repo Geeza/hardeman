@@ -1,26 +1,19 @@
 .navbar {
   
-  transition: background-color 0.4s, padding 0.2s, height 0.2s;
+  transition: background-color 0.4s, 
+              padding 0.2s, 
+              height 0.2s;
   
-  &.is_stuck {
-    z-index: 200;
-    background: $navbar-stick-background-color;
-    margin: 0 auto;
-    width: 100% !important;
-    padding-top: 0rem;
-    
-    .navbar__brand {
-      display: block;
-      margin-top: 1rem;
-    }
-    
-    .navbar__menu {
-      margin: 0;
-    }
-  }
+  
+
+  .menu-button {
+    display: block;
+    @extend %s-icon-hamburger;  
+  } 
   
   &__menu {
     list-style: none;
+    display: none;
     
     &__item {
       line-height: 2rem;
@@ -28,37 +21,81 @@
       margin-right: 2rem;
       
       > a {
+        
+        display: inline-block;
+        transition: border-color 0.4s;
         color: $navbar-link-color;
         text-decoration: none;
+        border-bottom: 0.2rem solid transparent;
         
         &:hover {
           color: $navbar-link-color-hover;
         }
+        
+        &.js-active {
+          border-bottom-color: $wit;
+        }
       }
       
       &--cta {
+        height: auto;
         padding: 0 0.75rem;
         border: rem(1px) solid $navbar-cta-border-color;
         border-radius: rem(8px);
+        > a {
+          border: none;
+        }
       }
     }
   }
   
-  @include break-tablet-portrait {
+  &__brand {
+    padding-top: 3rem;
     
+    &__sticky {
+      display: none;
+    }
   }
-      
-  @include break-desktop {
+   
+  @include break-tablet-landscape {
     padding-top: 2rem;
 
+    &.is_stuck {
+      z-index: 200;
+      background: $navbar-stick-background-color;
+      margin: 0 auto;
+      width: 100% !important;
+      padding-top: 0rem;
+      
+      .navbar__brand {
+        display: block;
+        margin-top: 1rem;
+        
+  
+      }
+      
+      .navbar__brand__regular {
+        display: none;
+      }
+      
+      .navbar__brand__sticky {
+        display: block;
+      }
+      
+      .navbar__menu {
+        margin: 0;
+      }
+    }
+  
     &__brand {
+      padding-top: 0;
       @include span(5);
       text-align: left;
     }
     
     &__menu {
       transition: margin 0.2s;
-      
+      display: block;
       @include span(11);
       text-align: right;
       display: block;

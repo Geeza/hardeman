@@ -1,0 +1,11 @@
+.footer {
+  background: $footer-background-color;
+  color: $footer-text-color;
+  margin-top: 2rem;
+  text-align: center;
+  @include type-tiny;
+  
+  @include break-tablet-portrait {
+    height: 20rem;
+  }
+}

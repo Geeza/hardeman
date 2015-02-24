@@ -28,6 +28,7 @@
       }
       
       &--article {
+          border-top: rem(1px) solid $points-border-color;
         @include span(8);
         border-right: rem(1px) solid $points-border-color;
         border-bottom: rem(1px) solid $points-border-color;

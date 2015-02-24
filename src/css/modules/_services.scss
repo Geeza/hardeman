@@ -1,0 +1,8 @@
+.services {
+  @extend .container;
+  
+  @include break-mobile-landscape {
+    border-left: rem(1px) solid $points-border-color;
+    border-right: rem(1px) solid $points-border-color;
+  }
+}

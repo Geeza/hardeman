@@ -1,17 +1,21 @@
 .points {
-  @extend .container;
   list-style: none;
   display: block;
   margin-top: 0;
   margin-bottom: 0;
-  border-bottom: rem(1px) solid $points-border-color;
   padding: 0;
+  border-top: rem(1px) solid $points-border-color;
   
   &__item {
     @include span(full); 
     display: block;
     text-align: center;
     padding: 2rem 0rem;
+    border-bottom: rem(1px) solid $points-border-color;
+    
+    &:last-child {
+      border-bottom: 0;
+    }
     
     &__title {
       @extend .h2;
@@ -23,18 +27,18 @@
     }
   }
   
-  @include break-mobile-landscape {
-    border-left: rem(1px) solid $points-border-color;
-    border-right: rem(1px) solid $points-border-color;
+  @include break-tablet-landscape {
     
     &__item {
-      @include span(7);  
-    }
-  }
-  
-  @include break-tablet-portrait {
-    
-    &__item {
+      @include span(5.3); 
+      padding: 4rem 0rem;
+      border-right: rem(1px) solid $points-border-color;
+      border-bottom: none;
+      
+      &:last-child {
+        border-right: none;
+      }
+      
       .js &.js-animate {
         opacity: 0;
         transform: translateZ(0);
@@ -44,21 +48,13 @@
          animation: fadeInDown 0.3s;
          animation-fill-mode: forwards;
       }  
-      
-      @include span(6); 
-    }
-  }
-  
-  @include break-tablet-landscape {
-    &__item {
-      @include span(4); 
-      padding: 4rem 2rem;
     }
   }
   
   @include break-desktop {
     &__item {
       @include span(5.3); 
+      padding: 4rem 2rem;
     }
   }
 }

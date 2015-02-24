@@ -2,14 +2,14 @@
   text-align: left;
   display: block;
   list-style: none;
-  padding: 1rem;
+  padding: 1rem 0;
   
   &__item {
-    display: block;
+    display: inline-block;
     @extend .icon;
     @extend .icon-checkmark;
     @extend .icon--small;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
     position: relative;
     color: $points-summary-text-color;
     @include type-regular;
@@ -24,5 +24,13 @@
   
   &__item + &__item {
     margin-top: .5rem;
+  }
+  
+  @include break-mobile-landscape {
+    text-align: center;
+  }
+  
+  @include break-tablet-landscape {
+    text-align: left;
   }
 }

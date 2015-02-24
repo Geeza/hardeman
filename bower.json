@@ -31,6 +31,9 @@
     ],
     "matchHeight": [
       "*min.js"
+    ],
+    "jquery-validation": [
+      "dist/*"
     ]
   }
 }

@@ -8,6 +8,11 @@
       margin-bottom: 0;
     }
   }
+  
+  em.error {
+    @include type-small;
+    color: $rood;
+  }
 }
 
 .control {
@@ -33,6 +38,10 @@
       @include type-regular;
       line-height: 1.5rem;
       min-height: 9rem;
+    }
+    
+    &.error {
+      box-shadow: 0 0 rem(1px) 0 $rood;
     }
   }
   

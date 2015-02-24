@@ -4,7 +4,7 @@
 
 $blauw: #00ADEE;
 $groen: #00FF75;
-
+$rood: #E40421;
 $wit: #FFFFFF;
 $zwart: #4A4A4A;
 $grijs-donker: #666666;
@@ -55,6 +55,9 @@ $form-button-text-color: $wit;
 $form-button-border-hover-color: darken($blauw, 10%);
 $form-button-background-hover-color: darken($blauw, 10%);
 $form-button-text-hover-color: $wit;
+
+$footer-background-color: $wit;
+$footer-text-color: $grijs-donker;
 
 // Typography
 $modular-scale-ratio: $golden;
