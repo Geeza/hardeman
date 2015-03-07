@@ -51,7 +51,8 @@
   
   &__brand {
     padding-top: 3rem;
-    
+    max-width: 100vw;
+    overflow: hidden;
     &__sticky {
       display: none;
     }

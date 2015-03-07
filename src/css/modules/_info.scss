@@ -1,9 +1,9 @@
 .info {
   display: block;
   list-style: none;
-  margin: 4rem 2rem;
+  margin: 3rem 0;
   
-  .info__item {
+  &__item {
     display: block;
     margin-bottom: 2rem;
     position: relative;
@@ -22,5 +22,7 @@
   
   @include break-tablet-landscape {
     padding-left: 0;
+    
+    margin: 4rem 2rem;
   }
 }

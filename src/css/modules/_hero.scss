@@ -1,22 +1,13 @@
+
+
 .hero {
   height: 30rem;
   position: relative;
   text-align: center;
-  
-  background-image: url("/images/financieel-advies.png");
-  @include background-image(linear-gradient(0deg, rgba(59,179,245,0.00) 17%, rgba(59,178,245,0.00) 72%, #3BB3F5 100%),
-                            linear-gradient(-135deg, rgba(0,255,119,0.30) 0%, rgba(58,179,244,0.30) 32%, rgba(24,221,172,0.15) 50%, rgba(28,216,179,0.20) 59%, rgba(58,179,244,0.30) 66%, rgba(58,179,244,0.30) 89%, rgba(59,178,245,0.30) 100%), 
-                            url("/images/financieel-advies.png"));
-  
   background-position: center center;
-                         
-  @include hidpi(2) {
-    @include background-image(linear-gradient(0deg, rgba(59,179,245,0.00) 17%, rgba(59,178,245,0.00) 72%, #3BB3F5 100%),
-                              linear-gradient(-135deg, rgba(0,255,119,0.40) 0%, rgba(58,179,244,0.40) 32%, rgba(24,221,172,0.15) 50%, rgba(28,216,179,0.20) 59%, rgba(58,179,244,0.30) 66%, rgba(58,179,244,0.30) 89%, rgba(59,178,245,0.30) 100%), 
-                              url("/images/financieel-advies@2x.png"));    
-  }
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("/images/financieel-advies.png");
   
   &__icon {
     position: absolute;
@@ -33,5 +24,33 @@
   
   @include break-tablet-portrait {
     height: 100vh;
+    background-image: url("/images/financieel-advies@tp.png");
+    
+    @include hidpi(2) {
+      background-image: url("/images/financieel-advies@tp2x.png");
+    }
+  }
+  
+  @include break-tablet-landscape {
+    height: 100vh;
+    background-image: url("/images/financieel-advies@tl.png");
+     
+    @include hidpi(2) { 
+      background-image: url("/images/financieel-advies@tl2x.png");
+    }
+  }
+  
+  @include break-desktop {
+    background-image: url("/images/financieel-advies.png");
+    
+    @include hidpi(2) {
+      background-image: url("/images/financieel-advies@2x.png");   
+    }
+    @include hidpi(3) {
+      background-image: url("/images/financieel-advies@3x.png");
+    }
+    @include hidpi(4) {
+      background-image: url("/images/financieel-advies@3x.png");
+    }
   }
 } 
