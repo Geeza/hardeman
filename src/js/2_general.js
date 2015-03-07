@@ -83,7 +83,7 @@ $(function() {
     
     sticky: {
       init: function() {
-        var mq = window.matchMedia('all and (min-width: 1024px)');
+        var mq = matchMedia('all and (min-width: 1024px)');
         if(!mq.matches) {
           return;
         }

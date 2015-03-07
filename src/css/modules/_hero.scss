@@ -3,7 +3,7 @@
   position: relative;
   text-align: center;
   
- 
+  background-image: url("/images/financieel-advies.png");
   @include background-image(linear-gradient(0deg, rgba(59,179,245,0.00) 17%, rgba(59,178,245,0.00) 72%, #3BB3F5 100%),
                             linear-gradient(-135deg, rgba(0,255,119,0.30) 0%, rgba(58,179,244,0.30) 32%, rgba(24,221,172,0.15) 50%, rgba(28,216,179,0.20) 59%, rgba(58,179,244,0.30) 66%, rgba(58,179,244,0.30) 89%, rgba(59,178,245,0.30) 100%), 
                             url("/images/financieel-advies.png"));
