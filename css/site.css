@@ -497,7 +497,10 @@ abbr[title] {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/images/financieel-advies.png"); }
+  background-image: url("/images/financieel-advies-mp.png"); }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: url("/images/financieel-advies-mp@2x.png"); } }
   .hero__icon {
     position: absolute;
     bottom: 10%;
@@ -505,20 +508,26 @@ abbr[title] {
     right: 0; }
     .hero__icon:after {
       color: #FFFFFF; }
+  @media (min-width: 448px) {
+    .hero {
+      background-image: url("/images/financieel-advies-ml.png"); }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .hero {
+          background-image: url("/images/financieel-advies-ml@2x.png"); } } }
   @media (min-width: 768px) {
     .hero {
       height: 100vh;
-      background-image: url("/images/financieel-advies@tp.png"); }
+      background-image: url("/images/financieel-advies-tp.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .hero {
-          background-image: url("/images/financieel-advies@tp2x.png"); } } }
+          background-image: url("/images/financieel-advies-tp@2x.png"); } } }
   @media (min-width: 1024px) {
     .hero {
       height: 100vh;
-      background-image: url("/images/financieel-advies@tl.png"); }
+      background-image: url("/images/financieel-advies-tl.png"); }
       @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .hero {
-          background-image: url("/images/financieel-advies@tl2x.png"); } } }
+          background-image: url("/images/financieel-advies-tl@2x.png"); } } }
   @media (min-width: 1279.99488px) {
     .hero {
       background-image: url("/images/financieel-advies.png"); }
@@ -588,7 +597,7 @@ abbr[title] {
           margin: 0; }
       .navbar__brand {
         padding-top: 0;
-        width: 31.25%;
+        width: 37.5%;
         float: left;
         padding-left: 1.5625%;
         padding-right: 1.5625%;
@@ -597,7 +606,7 @@ abbr[title] {
         -webkit-transition: margin 0.2s;
                 transition: margin 0.2s;
         display: block;
-        width: 68.75%;
+        width: 62.5%;
         float: left;
         padding-left: 1.5625%;
         padding-right: 1.5625%;
@@ -733,6 +742,8 @@ abbr[title] {
     color: #00ADEE; }
   .article__summary {
     margin-top: -1rem; }
+  .article__body a {
+    text-decoration: underline; }
   @media (min-width: 1279.99488px) {
     .article {
       padding: 3rem; } }
@@ -891,6 +902,11 @@ abbr[title] {
   text-align: center;
   font-size: 0.75rem;
   line-height: 1rem; }
+  .footer a {
+    color: #666666;
+    text-decoration: underline; }
+    .footer a:hover {
+      color: #00ADEE; }
   @media (min-width: 768px) {
     .footer {
       height: 20rem; } }
