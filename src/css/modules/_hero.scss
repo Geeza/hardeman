@@ -7,8 +7,12 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/images/financieel-advies.png");
-  
+  background-image: url("/images/financieel-advies-mp.png");
+ 
+  @include hidpi(2) {
+    background-image: url("/images/financieel-advies-mp@2x.png");
+  }
+    
   &__icon {
     position: absolute;
     bottom: 10%;
@@ -21,22 +25,29 @@
     } 
   }
   
+  @include break-mobile-landscape {
+    background-image: url("/images/financieel-advies-ml.png");
+ 
+    @include hidpi(2) {
+      background-image: url("/images/financieel-advies-ml@2x.png");
+    }
+  }
   
   @include break-tablet-portrait {
     height: 100vh;
-    background-image: url("/images/financieel-advies@tp.png");
+    background-image: url("/images/financieel-advies-tp.png");
     
     @include hidpi(2) {
-      background-image: url("/images/financieel-advies@tp2x.png");
+      background-image: url("/images/financieel-advies-tp@2x.png");
     }
   }
   
   @include break-tablet-landscape {
     height: 100vh;
-    background-image: url("/images/financieel-advies@tl.png");
+    background-image: url("/images/financieel-advies-tl.png");
      
     @include hidpi(2) { 
-      background-image: url("/images/financieel-advies@tl2x.png");
+      background-image: url("/images/financieel-advies-tl@2x.png");
     }
   }
   

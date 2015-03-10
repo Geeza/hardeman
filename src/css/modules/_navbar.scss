@@ -52,6 +52,7 @@
   &__brand {
     padding-top: 3rem;
     max-width: 100vw;
+    
     overflow: hidden;
     &__sticky {
       display: none;
@@ -90,14 +91,14 @@
   
     &__brand {
       padding-top: 0;
-      @include span(5);
+      @include span(6);
       text-align: left;
     }
     
     &__menu {
       transition: margin 0.2s;
       display: block;
-      @include span(11);
+      @include span(10);
       text-align: right;
       display: block;
       line-height: 5rem;

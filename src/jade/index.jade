@@ -44,8 +44,8 @@ html.no-js
               .navbar__brand
                 picture.navbar__brand__regular
                   source(media='(min-width: 480px)', srcset='/images/logo.svg')
-                  source(srcset='/images/logo--small.svg')
-                  img(src="/images/logo.svg")
+                  source(srcset='/images/logo--medium.svg')
+                  img(src="/images/logo--small.svg")
                 .navbar__brand__sticky
                   img(src="/images/logo--small.svg")
                   
@@ -66,7 +66,7 @@ html.no-js
         .services#diensten(data-scroll-spy='target')
           header.article.article--center
             h2.article__title.article__title--large Meester in financiële en fiscale zaken
-            p.article__summary Ik sta u graag bij met mijn expertise
+            p.article__summary Uw expert in belastingen, financiën en pensioenen
           ul.points(js-auto-height='true',js-animated='true')
             li.points__item
               i.icon.icon--medium.icon-doos
@@ -144,11 +144,11 @@ html.no-js
             ul.info
               li.info__item
                 i.icon.icon-email
-                a(href='mailto: mikehardeman@me.com') mikehardeman@me.com
+                <a href='mailto&#58;ha%6C&#108;%6F%40bu&#114;ea%7&#53;hardema%6E&#46;%6E%6&#67;'>ha&#108;lo&#64;bureauharde&#109;an&#46;nl</a>
                         
               li.info__item
                 i.icon.icon-linkedin
-                a(href='https://linkedin.com/mikehardeman') Linkedin profiel
+                a(href='https://nl.linkedin.com/pub/mike-hardeman/5/888/6ba/en') Linkedin profiel
               
               li.info__item
                 i.icon.icon-phone
@@ -167,7 +167,10 @@ html.no-js
             
       block footer
         footer.footer
-          .copyright &copy; 2015 Adviesbureau Hardeman 
+          .copyright 
+            &copy; 2015 Adviesbureau Hardeman
+            | |  
+            a(href='algemene-voorwaarden.pdf') Algemene voorwaarden
         
       script(src='/js/lib/jquery/dist/jquery.min.js')
       script(src='/js/lib/matchHeight/jquery.matchHeight-min.js')

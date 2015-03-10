@@ -70,7 +70,6 @@ gulp.task('preen', ['bower'], function(cb) {
 // ******************************
 gulp.task('scripts', function() {
   return gulp.src(path.join(paths.scripts, '**/*.js'))
-    .pipe(cache('js'))
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())

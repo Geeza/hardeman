@@ -19,6 +19,12 @@
     margin-top: -1rem;
   }
   
+  &__body {
+    a {
+      text-decoration: underline;
+    }
+  }
+  
   @include break-desktop {
     padding: 3rem;
   }

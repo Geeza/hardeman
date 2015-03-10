@@ -5,6 +5,15 @@
   text-align: center;
   @include type-tiny;
   
+  a {
+    color: $grijs-donker;
+    text-decoration: underline;
+    
+    &:hover {
+      color: $blauw;
+    }
+  } 
+  
   @include break-tablet-portrait {
     height: 20rem;
   }
